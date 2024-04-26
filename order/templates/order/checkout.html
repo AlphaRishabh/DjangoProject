@@ -192,12 +192,12 @@
             {% if item.product.has_variants %}
             <p>
               Size: <strong>{{item.variation.size.name}}</strong> Price:
-              <strong>${{item.variation.price}}</strong> Qty:
+              <strong>₹{{item.variation.price}}</strong> Qty:
               <strong>{{item.quantity}}</strong>
             </p>
             {% else %}
             <p>
-              Price: <strong>${{item.product.price}}</strong> Qty:
+              Price: <strong>₹{{item.product.price}}</strong> Qty:
               <strong>{{item.quantity}}</strong>
             </p>
             {% endif %}
@@ -224,7 +224,7 @@
     <div class="mt-5 py-5 shadow-xl rounded-xl bg-white">
       <div class="flex justify-between m-3 p-3">
         <p>Subtotal</p>
-        <p>${{order.get_cart_subtotal}}</p>
+        <p>₹{{order.get_cart_subtotal}}</p>
       </div>
       {% if order.coupon %}
       <div class="flex m-3 p-3 text-green-500">
@@ -235,7 +235,7 @@
             remove
           </button>
         </form>
-        <p class="ml-auto">-${{order.get_coupon_value}}</p>
+        <p class="ml-auto">-₹{{order.get_coupon_value}}</p>
       </div>
       {% endif %}
       <div class="flex justify-between m-3 p-3">
@@ -245,7 +245,7 @@
       <hr />
       <div class="flex justify-between m-3 p-3 font-bold text-xl">
         <p>Total</p>
-        <p>${{order.get_cart_total}}</p>
+        <p>₹{{order.get_cart_total}}</p>
       </div>
       <!-- Start Payment Button -->
       <div class="flex mt-5">

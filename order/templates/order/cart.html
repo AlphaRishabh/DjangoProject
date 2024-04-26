@@ -42,7 +42,7 @@
         <h1 class="font-semibold text-2xl">Shopping Cart</h1>
         <h2 class="font-semibold text-2xl">{{order.get_cart_items}} Item(s)</h2>
         <h2 class="font-semibold text-2xl">
-          Total: ${{order.get_cart_subtotal|floatformat:2}}
+          Total: ₹{{order.get_cart_subtotal|floatformat:2}}
         </h2>
       </div>
 
@@ -127,7 +127,7 @@
         </h1>
 
         <span class="text-center w-1/5 font-semibold text-sm"
-          >${{item.get_total|floatformat:2}}</span
+          >₹{{item.get_total|floatformat:2}}</span
         >
       </div>
       {% endfor %}

@@ -1,4 +1,4 @@
-<h1 style="color:rgb(133, 24, 24); text-align:center">Django Pizza Delivery App</h1>
+<h1 style="color:rgb(133, 24, 24); text-align:center">Django Food Order Delivery App</h1>
 
 <h1>Live Demo</h1>
 <a href="https://notarious2.pythonanywhere.com/">Visit</a> https://notarious2.pythonanywhere.com/

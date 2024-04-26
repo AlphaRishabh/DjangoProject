@@ -43,13 +43,13 @@
             {% for variant in product.get_product_variants %}
             <p
               class="prices-{{forloop.parentloop.counter}} {{variant.size}}-{{forloop.parentloop.counter}} {% if not forloop.first %} hidden {% endif %}">
-              ${{variant.price|floatformat:1}}
+              ₹{{variant.price|floatformat:1}}
             </p>
             {% endfor %}
           </div>
           {% else %}
           <div class="flex items-center font-bold text-xl text-green-500">
-            <p>${{product.price|floatformat:1}}</p>
+            <p>₹{{product.price|floatformat:1}}</p>
           </div>
           {% endif %}
           <!-- End Display Variant Prices -->
