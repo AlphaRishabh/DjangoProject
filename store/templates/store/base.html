@@ -20,47 +20,47 @@
   <script src="{% static 'store/js/helpers.js' %}"></script>
 </head>
 
-<body class="m-0 p-0 bg-sky-100/50">
-  <nav class="p-5 flex bg-cyan-200">
+<body class="" style="background-image: url('https://img.freepik.com/free-photo/black-smooth-textured-paper_53876-96064.jpg?t=st=1714217882~exp=1714221482~hmac=7c62a4f7f9a15babdf8d11ab8de09ceafd3185c89acb2fc287e4e63a72018885&w=1380');">
+  <nav class="p-5 flex " style="background-color: rgba(125, 87, 37, 0.869); color: aliceblue; border-radius: 5px;">
     <div class="flex justify-between items-center">
       <a href="{% url 'store:products' %}" class="flex">
         <img class="h-10 inline" src="{% static 'store/images/pizza.png' %}" />
-        <span class="invisible md:visible ml-2 text-xl text-gray-600 cursor-pointer font-[Poppins] font-semibold">
-          Crispy Pizza</span>
+        <span class="invisible md:visible ml-2 text-3xl text-white-600 cursor-pointer font-[Poppins] font-semibold">
+          GoFOOD</span>
       </a>
     </div>
     {% with request.resolver_match.url_name as url_name %}
-    <ul class="flex ml-auto items-center">
+    <ul class="flex ml-auto items-center font-[Poppins] font-semibold">
       <!-- Display orders tab if user is authenticated -->
       {% if user.is_authenticated %}
       <li
-        class="text-xl mx-4 hover:text-teal-900 duration-500 {% if url_name == 'my_orders' %} text-teal-700 {% endif %}">
-        <a href="{% url 'users:my_orders' %}">Orders</a>
+        class="hover:text-amber-300 text-xl mx-4 duration-500 font-[Poppins] font-semibold {% if url_name == 'my_orders' %} text-cyan-300 {% endif %}">
+        <a href="{% url 'users:my_orders' %}">ORDERS</a>
       </li>
       {% endif %}
 
       <li
-        class="text-xl mx-4 hover:text-teal-900 duration-500 {% if url_name == 'products' %} text-teal-700 {% endif %}">
-        <a href="{% url 'store:products' %}">Home</a>
+        class="hover:text-amber-300 text-xl mx-4 duration-500 {% if url_name == 'products' %} text-gray-300 {% endif %}">
+        <a href="{% url 'store:products' %}">HOME</a>
       </li>
       <li id="menu" class="text-xl">
         <div class="dropdown inline-block relative z-10">
           <button
             class="hover:text-teal-900 py-2 px-4 inline-flex items-center {% if url_name in 'pizzas, drinks, sides' %} text-teal-700 {% endif %}">
-            Menu
+            MENU
           </button>
-          <ul class="bg-cyan-200 rounded-b-xl dropdown-menu hidden absolute pt-1 left-0 right-0">
+          <ul class="rounded-b-xl dropdown-menu hidden absolute pt-1 left-0 right-0" style="background-color: rgba(125, 87, 37, 0.869);">
             <li class="">
               <a class="hover:text-teal-900 py-2 px-4 block whitespace-no-wrap {% if url_name == 'pizzas' %} text-teal-700 {% endif %}"
-                href="{% url 'store:pizzas' %}">Pizza</a>
+                href="{% url 'store:pizzas' %}">PIZZA</a>
             </li>
             <li class="">
               <a class="hover:text-teal-900 py-2 px-4 block whitespace-no-wrap {% if url_name == 'drinks' %} text-teal-700 {% endif %}"
-                href="{% url 'store:drinks' %}">Drinks</a>
+                href="{% url 'store:drinks' %}">DRINKS</a>
             </li>
             <li class="">
               <a class="hover:text-teal-900 py-2 px-4 block whitespace-no-wrap {% if url_name == 'sides' %} text-teal-700 {% endif %}"
-                href="{% url 'store:sides' %}">Sides</a>
+                href="{% url 'store:sides' %}">SIDES</a>
             </li>
           </ul>
         </div>
@@ -68,15 +68,15 @@
 
       {% if user.is_authenticated %}
       <li class="text-xl mx-4 hover:text-teal-900 duration-500">
-        <a href="{% url 'users:logout' %}">Log Out</a>
+        <a href="{% url 'users:logout' %}">LOG OUT</a>
       </li>
       {% else %}
       <li class="text-xl mx-4 hover:text-teal-900 duration-500 {% if url_name == 'login' %} text-teal-700 {% endif %}">
-        <a href="{% url 'users:login' %}">Log In</a>
+        <a href="{% url 'users:login' %}">LOG IN</a>
       </li>
       <li
         class="text-xl mx-4 hover:text-text-teal-900 duration-500 {% if url_name == 'register' %} text-teal-700 {% endif %}">
-        <a href="{% url 'users:register' %}">Register</a>
+        <a href="{% url 'users:register' %}">REGISTER
       </li>
       {% endif %}
       <li class="shrink-0">
@@ -85,8 +85,8 @@
         </a>
       </li>
       <li class="p-2">
-        <div class="rounded-lg border border-gray-400 px-2">
-          <p class="cart-count text-lg text-gray-600 font-semibold">
+        <div class="rounded-lg border border--400 px-2">
+          <p class="cart-count text-lg text-sky-600 font-semibold" style="color: aliceblue;">
             {{cart_quantity}}
           </p>
         </div>
