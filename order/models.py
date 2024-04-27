@@ -78,8 +78,7 @@ class Order(models.Model):
             add_comma = ", " if l > 1 and ticker != l else ""
             if item.variation:
                 product_title = f"""{item.product.name}
-                ({item.variation.get_size},
-                #{item.quantity}, ${item.get_total}){add_comma}"""
+                ({item.variation.get_size}){add_comma}"""
             else:
                 product_title = f"""{item.product.name}
                 (#{item.quantity}, ${item.get_total}){add_comma}"""

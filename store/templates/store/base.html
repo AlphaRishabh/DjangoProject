@@ -21,7 +21,7 @@
 </head>
 
 <body class="" style="background-image: url('https://img.freepik.com/free-photo/black-smooth-textured-paper_53876-96064.jpg?t=st=1714217882~exp=1714221482~hmac=7c62a4f7f9a15babdf8d11ab8de09ceafd3185c89acb2fc287e4e63a72018885&w=1380');">
-  <nav class="p-5 flex " style="background-color: rgba(125, 87, 37, 0.869); color: aliceblue; border-radius: 5px;">
+  <nav class="p-5 flex " style="background-image: url('https://img.freepik.com/free-vector/wooden-background-design_1189-207.jpg?t=st=1714218405~exp=1714222005~hmac=d8b0a45efd4de570cd3ba83623681d74b8197bf2c6a174658cca56533a2581bf&w=826'); color: aliceblue; border-radius: 5px;">
     <div class="flex justify-between items-center">
       <a href="{% url 'store:products' %}" class="flex">
         <img class="h-10 inline" src="{% static 'store/images/pizza.png' %}" />
@@ -81,7 +81,7 @@
       {% endif %}
       <li class="shrink-0">
         <a href="{% url 'order:cart' %}">
-          <img class="h-6" src="{% static 'store/images/cart1.png' %}" alt="cart" id="cart-image" />
+          <img class="h-6" src="{% static 'store/images/cart2.png' %}" alt="cart" id="cart-image" style="color: aliceblue;height: 50px; width: 50px;" />
         </a>
       </li>
       <li class="p-2">
@@ -99,6 +99,7 @@
   <!-- JQuery Datepicker -->
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 </body>
+
 
 </html>
 <script>

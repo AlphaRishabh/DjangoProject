@@ -40,13 +40,13 @@
       <div class="w-1/5">{{order.delivery_method}}</div>
       <div class="w-1/5">{{order.payment_method}}</div>
       <div class="w-1/5">{{order.get_cart_items}}</div>
-      <div class="w-1/5">${{order.get_cart_subtotal}}</div>
+      <div class="w-1/5">₹{{order.get_cart_subtotal}}</div>
       {% if order.coupon %}
-      <div class="w-1/5">-${{order.get_coupon_value}}</div>
+      <div class="w-1/5">-₹{{order.get_coupon_value}}</div>
       {% else %}
       <div class="w-1/5">-</div>
       {% endif %}
-      <div class="w-1/5 font-semibold">${{order.get_cart_total}}</div>
+      <div class="w-1/5 font-semibold">₹{{order.get_cart_total}}</div>
       <button class="w-1/12 text-blue-600" onclick="toggleModal('{{forloop.counter}}')">view</button>
       <div>
       </div>
@@ -85,9 +85,9 @@
                 <p>{{item.variation.size}}</p>
                 {% endif %}
               </div>
-              <p class="w-1/5 text-center">${{item.get_item_price}}</p>
+              <p class="w-1/5 text-center">₹{{item.get_item_price}}</p>
               <p class="w-1/5 text-center">{{item.quantity}}</p>
-              <p class="w-1/5 text-center">${{item.get_total}}</p>
+              <p class="w-1/5 text-center">₹{{item.get_total}}</p>
             </div>
             {% endfor %}
             <!-- Brief summary -->
@@ -108,19 +108,19 @@
                 <div class="border-b border-black/50 border-3 mb-3"></div>
                 <div class="flex">
                   <p class="w-48">Subtotal:</p>
-                  <p>${{order.get_cart_subtotal}}</p>
+                  <p>₹{{order.get_cart_subtotal}}</p>
                 </div>
                 <div class="flex">
                   <p class="w-48">Coupon: {% if order.coupon %} ({{order.coupon.code}}) {% endif %}</p>
                   {% if order.coupon %}
-                  <p>(${{order.get_coupon_value}})</p>
+                  <p>(₹{{order.get_coupon_value}})</p>
                   {% else %}
                   <p>-</p>
                   {% endif %}
                 </div>
                 <div class="flex">
                   <p class="w-48">Total:</p>
-                  <p>${{order.get_cart_total}}</p>
+                  <p>₹{{order.get_cart_total}}</p>
                 </div>
               </div>
             </div>
