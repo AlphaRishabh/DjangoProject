@@ -1,7 +1,6 @@
 <h1 style="color:rgb(133, 24, 24); text-align:center">Django Food Order Delivery App</h1>
 
-<h1>Live Demo</h1>
-<a href="https://notarious2.pythonanywhere.com/">Visit</a> https://notarious2.pythonanywhere.com/
+
 
 <img src="images/front_page.png" alt="Front page"/>
 
@@ -15,14 +14,7 @@ password: admin
 ```
 
 <hr>
-<p style="font-weight: bold;">This e-commerce app was built using the following technologies:</p>
-<p float="left">
-<img src="images/django.jpeg" style="width:100px; height: 50px; border-radius: 100px;" alt="Django">
-<img src="images/tailwindcss.svg" style="width:200px; height: 30px;" alt="TailwindCSS">
-<img src="images/stripe.webp" style="width:100px; height: 50px;" alt="Stripe">
-<img src="images/jquery.svg" style="width:120px; height: 40px;" alt="JQuery">
 
-</p>
 <h1>Features</h1>
 <ul>
     <li>
@@ -45,19 +37,6 @@ password: admin
     </li>
 
 </ul>
-
-<h1>SQL Relational Schema</h1>
-<p>The app uses SQLite database. Relational representation of Django Models used in ePizza app are provided below. </p>
-<img src="images/sql_erd.png" alt="SQL model"/>
-
-<h1>Coupons</h1>
-<p>3 coupons (integrated with Stripe Payment Gateway) are available at Checkout </p>
-
-**WINTER:** 50% off the order total
-
-**SUMMER:** $10 off the order total
-
-<h1>App Setup</h1>
 
 **Clone Repository:**
 
